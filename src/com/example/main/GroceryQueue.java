@@ -1,11 +1,11 @@
 package com.example.main;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class List {
+public class GroceryQueue {
   public static void main(String[] args) {
-    ArrayList<String> groceryList = new ArrayList<>();
+    Queue<String> groceryList = new LinkedList<>();
 
     groceryList.add("Milk");
     groceryList.add("Eggs");
@@ -16,7 +16,7 @@ public class List {
 
     System.out.println("Don't forget to grab " + String.join(", ", groceryList).toLowerCase() + "!");
     // Output: Don't forget to grab milk, eggs, bread, milk!
-    
+
     System.out.println("The grocery list has " + groceryList.size() + " items.");
     // Output: The grocery list has 4 items.
 
@@ -29,8 +29,8 @@ public class List {
     // Bread
     // Milk
 
-    Collections.sort(groceryList);
-    System.out.println("Alphabetically sorted grocery list: " + String.join(", ", groceryList).toLowerCase() + ".");
-    // Output: Alphabetically sorted grocery list: bread, eggs, milk.
+    groceryList.poll();
+    System.out.println("After removing the first item, the grocery list has " + String.join(", ", groceryList).toLowerCase() + " still!");
+    // Output: After removing the first item, the grocery list has eggs, bread, milk still!
   }
 }

@@ -1,11 +1,12 @@
 package com.example.main;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Map {
+public class GroceryMap {
   public static void main(String[] args) {
-    HashMap<String, Integer> groceryList = new HashMap<>();
+    Map<String, Integer> groceryList = new HashMap<>();
 
     groceryList.put("Milk", 2);
     groceryList.put("Eggs", 12);

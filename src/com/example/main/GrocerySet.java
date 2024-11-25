@@ -1,10 +1,12 @@
 package com.example.main;
 
-import java.util.LinkedList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
-public class Queue {
+public class GrocerySet {
   public static void main(String[] args) {
-    LinkedList<String> groceryList = new LinkedList<>();
+    Set<String> groceryList = new HashSet<>();
 
     groceryList.add("Milk");
     groceryList.add("Eggs");
@@ -14,22 +16,21 @@ public class Queue {
     groceryList.add("Milk");
 
     System.out.println("Don't forget to grab " + String.join(", ", groceryList).toLowerCase() + "!");
-    // Output: Don't forget to grab milk, eggs, bread, milk!
-
+    // Output: Don't forget to grab eggs, milk, bread!
+    
     System.out.println("The grocery list has " + groceryList.size() + " items.");
-    // Output: The grocery list has 4 items.
+    // Output: The grocery list has 3 items.
 
     for (String item : groceryList) {
       System.out.println(item);
     }
     // Output:
-    // Milk
     // Eggs
-    // Bread
     // Milk
+    // Bread
 
-    groceryList.poll();
-    System.out.println("After removing the first item, the grocery list has " + String.join(", ", groceryList).toLowerCase() + " still!");
-    // Output: After removing the first item, the grocery list has eggs, bread, milk still!
+    TreeSet<String> sortedGroceryList = new TreeSet<>(groceryList);
+    System.out.println("Alphabetically sorted grocery list: " + String.join(", ", sortedGroceryList).toLowerCase() + ".");
+    // Output: Alphabetically sorted grocery list: bread, eggs, milk.
   }
 }
