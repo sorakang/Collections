@@ -1,0 +1,6 @@
+# Ignore compiled class files, other files and directories
+*.class
+.DS_Store
+.idea/
+.vscode/
+out/
