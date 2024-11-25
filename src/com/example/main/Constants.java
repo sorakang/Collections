@@ -1,6 +1,6 @@
 package com.example.main;
 
-public class StudentConstants {
+public class Constants {
   public static final String[] STUDENT_NAMES = {
     "Alice",
     "Bob",
