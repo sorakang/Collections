@@ -1,6 +1,7 @@
 package com.example.main;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.TreeSet;
 
 public class Set {
   public static void main(String[] args) {
